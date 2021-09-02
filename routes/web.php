@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('countdown');
-});
+// Route::get('/', function () {
+//     return view('countdown');
+// });
 
+Route::get('/', 'CountDownController@CountDown');
+Route::post('/', 'CountDownController@save');
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
